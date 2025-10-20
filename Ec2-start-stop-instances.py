@@ -80,7 +80,7 @@ def lambda_handler(event, context):
             # Determine action based on working hours
             current_utc_time = datetime.now(tz=timezone.utc).time()
             workday_start = datetime.strptime("03:30:00", "%H:%M:%S").time()
-            workday_stop = datetime.strptime("8:00:00", "%H:%M:%S").time()
+            workday_stop = datetime.strptime("16:30:00", "%H:%M:%S").time()
 
             action = None
             previous_state = instance_state
